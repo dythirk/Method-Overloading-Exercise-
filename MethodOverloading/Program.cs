@@ -25,7 +25,12 @@
             }
             else
             {
-                return (x+y + " pesos");
+                if (x + y == -1)
+                    return "-1 peso";
+                else if (x + y == 1)
+                    return "1 peso";
+                else
+                    return (x + y + " pesos");
             }
 
         }
@@ -33,7 +38,7 @@
         {
             Console.WriteLine(Add(2,3));
             Console.WriteLine(Add(3.90m, 7.62m));
-            Console.WriteLine(Add(2,3,true));
+            Console.WriteLine(Add(7,9,false));
         }
     }
 }
